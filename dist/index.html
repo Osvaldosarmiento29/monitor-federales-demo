@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Demostración interactiva de un monitor de expedientes: publicaciones, consecutivos y calendario de términos. Todos los datos son ficticios.">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Monitor de Expedientes · Demo</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="demo-strip">DEMOSTRACIÓN · Datos ficticios · Sin conexión a portales judiciales</div>
+  <header>
+    <a class="brand" href="#inicio"><span class="brand-symbol" aria-hidden="true">⚖</span><span>Monitor de Expedientes<small>Estudio Horizonte · Despacho ficticio</small></span></a>
+    <nav aria-label="Principal">
+      <a href="#inicio">Inicio</a><a href="#agenda">Calendario de términos</a><a href="#avisos">Avisos <span id="contador-avisos" class="counter">0</span></a>
+      <button id="tema" class="quiet" aria-label="Activar modo oscuro">◐ Apariencia</button>
+      <button id="guia" class="quiet">Cómo probar</button>
+    </nav>
+  </header>
+  <div class="shell"><aside aria-label="Módulos">
+    <p class="eyebrow">ÁREA DE TRABAJO</p>
+    <a href="#federales"><span aria-hidden="true">▥</span> Federales</a>
+    <a href="#locales"><span aria-hidden="true">▤</span> Locales</a>
+    <a href="#amparos"><span aria-hidden="true">◇</span> Amparos</a>
+    <div class="aside-note"><strong>Explora sin riesgo</strong><p>Las acciones sólo cambian esta demostración en tu navegador.</p><button class="link" id="reiniciar">Restablecer demo</button></div>
+  </aside><main id="contenido" tabindex="-1"></main></div>
+  <footer>Entorno de muestra. Las consultas, acuerdos y plazos son ficticios. No constituye una herramienta para gestionar asuntos reales.</footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="dialog-heading"><h2 id="modal-title"></h2><button id="cerrar-modal" class="quiet" aria-label="Cerrar ventana">✕</button></div><div id="modal-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
